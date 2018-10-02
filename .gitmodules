@@ -1,9 +1,9 @@
-[submodule "hybris-usb"]
-	path = hybris-usb
-	url = https://aur.archlinux.org/hybris-usb.git
 [submodule "libhybris-git"]
 	path = libhybris-git
 	url = https://aur.archlinux.org/libhybris-git.git
+[submodule "hybris-usb"]
+	path = hybris-usb
+	url = https://aur.archlinux.org/hybris-usb.git
 [submodule "simg-tools"]
 	path = simg-tools
 	url = https://aur.archlinux.org/simg-tools.git
