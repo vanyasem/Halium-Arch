@@ -2,16 +2,16 @@
 # Contributor: Michael Serpieri <mickybart@pygoscelis.org>
 
 pkgbase=libhybris-xorg-git
-pkgname=('libhybris-xorg-git' 'libhybris-libgl-xorg-git' 'libhybris-wayland-egl-xorg-git')
+pkgname=(libhybris-xorg-git libhybris-libgl-xorg-git libhybris-wayland-egl-xorg-git)
 _pkgbase=libhybris
 pkgver=1302.80ac938
 pkgrel=1
-arch=(armv7h aarch64)
 url='https://github.com/NotKit/libhybris'
+arch=(armv7h aarch64)
 license=(Apache)
 makedepends=(wayland hybris-android-headers)
 source=('libhybris::git+https://github.com/NotKit/libhybris')
-md5sums=('SKIP')
+sha256sums=('SKIP')
 
 pkgver() {
   cd "${srcdir}/${_pkgbase}"
