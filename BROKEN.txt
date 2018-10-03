@@ -1,0 +1,27 @@
+sudo Xorg -listen TCP -retro
+LD_LIBRARY_PATH=/opt/android/hybris/lib/ Xorg -listen TCP -retro -nocursor
+
+libhybris:
+sudo mv /usr/lib/pkgconfig/glesv1_cm.pc /usr/lib/pkgconfig/glesv1_cm.pc.old
+sudo mv /usr/lib/pkgconfig/egl.pc /usr/lib/pkgconfig/egl.pc.old
+sudo mv /usr/lib/pkgconfig/glesv2.pc /usr/lib/pkgconfig/glesv2.pc.old
+
+:: libhybris-libgl-git and libglvnd are in conflict (libgl). Remove libglvnd? [y/N] y
+:: removing libglvnd breaks dependency 'libglvnd' required by mesa
+sudo pacman -Rdd libglvnd
+
+sudo mkdir /usr/lib/mesa-egl
+sudo mv /usr/lib/libGL.so* /usr/lib/mesa-egl/
+sudo mv /usr/lib/libEGL.so* /usr/lib/mesa-egl/
+sudo mv /usr/lib/libGLES*.so* /usr/lib/mesa-egl
+
+glamor-hybris-git:
+sudo nano /usr/include/xf86drm.h :
+ #include <libdrm/drm.h>
+glamor-hybris-git: /usr/include/xorg/glamor.h exists in filesystem (owned by xorg-server-devel)
+rm /usr/include/xorg/glamor.h
+
+
+https://wiki.archlinux.org/index.php/Libinput#Via_Xorg_configuration_file
+sudo nano /usr/share/X11/xorg.conf.d/40-libinput.conf
+ (touchscreen) Option "TransformationMatrix" "0 -1 1 1 0 0 0 0 1"
