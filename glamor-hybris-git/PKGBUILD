@@ -2,7 +2,7 @@
 
 pkgname=glamor-hybris-git
 _pkgname=glamor-hybris
-pkgver=r856.948bc3c
+pkgver=r852.5689e03
 pkgrel=1
 pkgdesc='Glamor Xserver 2D acceleration, modified to work with libhybris drivers'
 url='https://github.com/NotKit/glamor-hybris'
@@ -13,7 +13,7 @@ provides=(glamor-hybris)
 depends=(xorg-server xproto fontsproto randrproto renderproto)
 makedepends=(xorg-server-devel git)
 groups=(xorg-drivers xorg)
-source=('git+https://github.com/gemian/glamor-hybris')
+source=('git+https://github.com/NotKit/glamor-hybris')
 sha256sums=('SKIP')
 
 pkgver() {

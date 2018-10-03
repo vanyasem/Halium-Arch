@@ -1,6 +1,6 @@
 pkgbase = drihybris-git
 	pkgdesc = DRIHYBRIS extension (based on DRI3) for buffer sharing on libhybris-based adaptations
-	pkgver = r9.e7bc95f
+	pkgver = r1.fbaf21e
 	pkgrel = 1
 	url = https://github.com/NotKit/drihybris
 	arch = i686
@@ -18,7 +18,7 @@ pkgbase = drihybris-git
 	depends = renderproto
 	provides = drihybris
 	conflicts = drihybris
-	source = git+https://github.com/gemian/drihybris.git
+	source = git+https://github.com/NotKit/drihybris.git
 	sha256sums = SKIP
 
 pkgname = drihybris-git

@@ -1,6 +1,6 @@
 pkgbase = glamor-hybris-git
 	pkgdesc = Glamor Xserver 2D acceleration, modified to work with libhybris drivers
-	pkgver = r856.948bc3c
+	pkgver = r852.5689e03
 	pkgrel = 1
 	url = https://github.com/NotKit/glamor-hybris
 	arch = i686
@@ -18,7 +18,7 @@ pkgbase = glamor-hybris-git
 	depends = renderproto
 	provides = glamor-hybris
 	conflicts = glamor-hybris
-	source = git+https://github.com/gemian/glamor-hybris
+	source = git+https://github.com/NotKit/glamor-hybris
 	sha256sums = SKIP
 
 pkgname = glamor-hybris-git
