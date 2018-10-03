@@ -1,0 +1,34 @@
+pkgbase = libhybris-xorg-git
+	pkgver = 1302.80ac938
+	pkgrel = 1
+	url = https://github.com/NotKit/libhybris
+	arch = x86_64
+	arch = armv7h
+	arch = aarch64
+	license = Apache
+	makedepends = wayland
+	makedepends = hybris-android-headers
+	source = libhybris::git+https://github.com/NotKit/libhybris
+	md5sums = SKIP
+
+pkgname = libhybris-xorg-git
+	pkgdesc = hybris allows to use bionic-based HW adaptations in glibc systems
+	depends = hybris-android-headers
+	provides = libhybris
+	conflicts = libhybris
+
+pkgname = libhybris-libgl-xorg-git
+	pkgdesc = hybris 3-D graphics library
+	depends = libhybris
+	depends = libhybris-wayland-egl-git
+	provides = libgl
+	conflicts = libgl
+	replaces = libgl
+
+pkgname = libhybris-wayland-egl-xorg-git
+	pkgdesc = hybris 3-D wayland library
+	depends = libhybris
+	provides = libwayland-egl
+	conflicts = libwayland-egl
+	replaces = libwayland-egl
+

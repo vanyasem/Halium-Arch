@@ -2,12 +2,14 @@
 
 pkgname=drihybris-git
 _pkgname=drihybris
-pkgver=e7bc95f
+pkgver=r9.e7bc95f
 pkgrel=1
 pkgdesc='DRIHYBRIS extension (based on DRI3) for buffer sharing on libhybris-based adaptations'
 url='https://github.com/NotKit/drihybris'
 arch=(i686 x86_64 armv7h aarch64)
 license=()
+conflicts=(drihybris)
+provides=(drihybris)
 depends=(xorg-server xproto fontsproto randrproto renderproto)
 makedepends=(xorg-server-devel git)
 groups=(xorg-drivers xorg)
@@ -15,17 +17,17 @@ source=('git+https://github.com/gemian/drihybris.git')
 sha256sums=('SKIP')
 
 pkgver() {
-  cd $_pkgname
-  git describe --always
+  cd ${_pkgname}
+  echo "r$(git rev-list --count HEAD).$(git describe --always)"
 }
 
 prepare() {
-  cd $_pkgname
+  cd ${_pkgname}
   NOCONFIGURE=1 ./autogen.sh
 }
 
 build() {
-  cd $_pkgname
+  cd ${_pkgname}
   export CPLUS_INCLUDE_PATH=/opt/android/include:/opt/android/hybris/include
   export C_INCLUDE_PATH=/opt/android/include:/opt/android/hybris/include
   ./configure --prefix=/usr
@@ -33,6 +35,6 @@ build() {
 }
 
 package() {
-  cd $_pkgname
+  cd ${_pkgname}
   make DESTDIR="$pkgdir" install
 }
