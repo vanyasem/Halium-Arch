@@ -19,7 +19,7 @@ _Clickable icons:_
 - [x] `simg-tools` [submodule](https://aur.archlinux.org/packages/simg-tools/) | [🆗](https://aur.archlinux.org/pkgbase/simg-tools/?comments=all)
 
 **Halium packages:**
-- [x] `hybris-usb` [submodule](https://aur.archlinux.org/packages/hybris-usb/) | [🆗](https://aur.archlinux.org/pkgbase/hybris-usb/?comments=all) [⛔️](https://aur.archlinux.org/pkgbase/hybris-usb/?comments=all)
+- [x] `hybris-usb` [submodule](https://aur.archlinux.org/packages/hybris-usb/) | [⛔️](https://aur.archlinux.org/pkgbase/hybris-usb/?comments=all) [⛔️](https://aur.archlinux.org/pkgbase/hybris-usb/?comments=all)
 - [x] `hybris-android-headers-7` [🌍](https://github.com/vanyasem/Halium-Arch/tree/master/hybris-android-headers-7)
 - [x] `libhybris` [submodule](https://aur.archlinux.org/packages/libhybris-git/)
 - [x] `lxc-android` [🌍](https://github.com/vanyasem/Halium-Arch/tree/master/lxc-android-git) | [⛔️](https://github.com/Halium/lxc-android/issues/13) [⛔️](https://github.com/Halium/lxc-android/pull/15)
